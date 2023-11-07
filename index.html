@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Tickethack</title>
 </head>
 
-<body>
+<body id="main">
     <header>
         <a href="index.html">Tickethack</a>
         <div>
@@ -18,17 +19,20 @@
     <main>
         <h1>Explore the world effortlessly by train!</h1>
         <p>Compare, book and enjoy cheap prices for train tickets: your journey starts on Tickethack.</p>
-        <div id="searchCard" class="card">
-            <div>
-                <input type="text" placeholder="Departure" id="searchDepart" />
-                <input type="text" placeholder="Arrival" id="searchArrival" />
+        <div id="cardContainer">
+            <div id="searchCard" class="card">
+                <div>
+                    <input type="text" placeholder="Departure" id="searchDepart" />
+                    <input type="text" placeholder="Arrival" id="searchArrival" />
+                </div>
+                <input type="date" id="dateDepart"/>
+                <input type="button" value="Search" id="searchButton" />
             </div>
-            <input type="date" id="dateDepart" />
-            <input type="button" value="Search" id="searchButton" />
-        </div>
-        <div id="resultCard" class="card">
-            <img src="./image/train.png" alt="Logo train" />
-            <p>It's time to book your future trip.</p>
+            <div id="resultCard" class="card">
+                <img src="./image/train.png" alt="Logo train" />
+                <div id="border"></div>
+                <p>It's time to book your future trip.</p>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>
