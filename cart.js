@@ -6,9 +6,11 @@ fetch('http://localhost:3000/carts')
 const newCart = data.cart
 console.log(data)
 if(newCart.length != 0){
+    let total = 0
     document.querySelector('#cart-container').innerHTML =[]
     for(let i =0; i<newCart.length; i++){
         const date = new Date(newCart[i].trip.date)
+        total += newCart[i].trip.price
         document.querySelector('#cart-container').innerHTML +=
         `
         <div class="trip">
@@ -19,4 +21,13 @@ if(newCart.length != 0){
         </div>
         `
     
-}}}) 
+    }
+    document.querySelector('#cart-container').innerHTML +=
+    `
+    <div>
+        <p>Total:${total}</p>
+        <button type="submit" class="addTrip">Purchase</button>
+    </div>
+    `
+}
+}) 
