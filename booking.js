@@ -4,7 +4,7 @@ fetch('http://localhost:3000/bookings')
 
         
         if(data.trips.length != 0){
-            document.querySelector('#booking-container').innerHTML = `<h1 id="booking-title">My bookings</h1>`
+            document.querySelector('#booking-container').innerHTML = `<h1 id="booking-title">My booking</h1>`
            
             for (let i =0; i<data.trips.length; i++){
                 const date = new Date(data.trips[i].book.date)
