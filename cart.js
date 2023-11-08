@@ -42,8 +42,8 @@ if(newCart.length != 0){
 
     document.querySelector('#cart-container').innerHTML +=
     `
-    <div>
-        <p>Total:${total}</p>
+    <div class="purchase">
+        <p class="total">Total:${total}</p>
         <button type="submit" class="purchaseTrips">Purchase</button>
     </div>
     `
