@@ -1,3 +1,7 @@
+var d = new Date();
+document.getElementById("dateDepart").valueAsDate=d;
+
+
 
 function addTripToCart(){
     for (let j = 0;j<document.querySelectorAll('.addTrip').length; j++){
