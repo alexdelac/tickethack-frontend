@@ -9,7 +9,9 @@ function addTripToCart(){
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({id: this.value})
             }).then(response=>response.json())
-                .then(data=>console.log(data))
+                .then(data=>{
+                    window.location.assign('cart.html')
+                })
         })
     }
     

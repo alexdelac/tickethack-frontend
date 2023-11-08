@@ -141,3 +141,26 @@ input{
     border-radius: 5px;
     border: none;
 }
+
+.bg-grey{
+    background-color: #f0f1f2;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 15vh;
+}
+
+.booking-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
