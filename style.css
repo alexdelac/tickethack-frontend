@@ -96,6 +96,8 @@ input{
     justify-content: space-around;
     align-items: center;
     padding: 15px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 
 #resultCard>img{
@@ -110,4 +112,32 @@ input{
 
 #resultCard>p{
     font-size: 20px;
+}
+
+.trip{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    background-color: #f6eeef;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.trip>p{
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+    
+}
+
+.addTrip{
+    background-color: #469e86 ;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
 }
