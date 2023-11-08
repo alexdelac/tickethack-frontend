@@ -40,11 +40,12 @@ document.querySelector('#searchButton').addEventListener('click', function(){
                 document.querySelector('#resultCard').innerHTML =[]
                 for(let i =0; i<trips.length; i++){
                     const date = new Date(trips[i].date)
+                    const minutes = date.getMinutes()<10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
                     document.querySelector('#resultCard').innerHTML +=
                     `
                     <div class="trip">
                         <p>${trips[i].departure}>${trips[i].arrival}</p>
-                        <p>${date.getHours()}h${date.getMinutes()}</p>
+                        <p>${date.getHours()}h${minutes}</p>
                         <p>${trips[i].price}€<p/>
                         <button type="submit" class="addTrip" value="${trips[i]._id}">Book</button>
                     </div>
