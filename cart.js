@@ -42,7 +42,7 @@ fetch('http://localhost:3000/carts')
 
 const newCart = data.cart
 if(newCart.length != 0){
-    document.querySelector('#cart-container').innerHTML = `<h1 class="cart-title">My cart</h1>`
+    document.querySelector('#cart-container').innerHTML = `<h1 id="booking-title">My cart</h1>`
     for(let i =0; i<newCart.length; i++){
         const date = new Date(newCart[i].trip.date)
         const minutes = date.getMinutes()<10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
@@ -60,7 +60,7 @@ if(newCart.length != 0){
 
     document.querySelector('#cart-container').innerHTML +=
     `
-    <div>
+    <div class="purchase">
         <p id="total"></p>
         <button type="submit" class="purchaseTrips" id="purchase">Purchase</button>
     </div>
