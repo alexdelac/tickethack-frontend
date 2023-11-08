@@ -1,3 +1,20 @@
+
+function addTripToCart(){
+    for (let j = 0;j<document.querySelectorAll('.addTrip').length; j++){
+        document.querySelectorAll('.addTrip')[j].addEventListener('click', function(){
+
+            console.log(this.value)
+            fetch('http://localhost:3000/carts', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({id: this.value})
+            }).then(response=>response.json())
+                .then(data=>console.log(data))
+        })
+    }
+    
+}
+
 document.querySelector('#searchButton').addEventListener('click', function(){
     const departCity = document.querySelector('#searchDepart').value
     const arrivalCity = document.querySelector('#searchArrival').value
@@ -48,19 +65,3 @@ document.querySelector('#searchButton').addEventListener('click', function(){
 
 })
 
-
-function addTripToCart(){
-    for (let j = 0;j<document.querySelectorAll('.addTrip').length; j++){
-        document.querySelectorAll('.addTrip')[j].addEventListener('click', function(){
-
-            console.log(this.value)
-            fetch('http://localhost:3000/carts', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({id: this.value})
-            }).then(response=>response.json())
-                .then(data=>console.log(data))
-        })
-    }
-    
-}
